@@ -2,6 +2,8 @@
 
 Nvim wrapper over chatgpt free web interface
 
+Using https://github.com/sigmaSd/Chat
+
 ## Dependencies
 
 Requires deno
