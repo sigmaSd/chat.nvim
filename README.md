@@ -21,3 +21,6 @@ Requires deno
 ## Demo
 
 <img src="https://cdn.discordapp.com/attachments/983096812456017934/1082702845700214944/chat.nvim.gif"/>
+
+## TODO
+- [ ] automaticly add the right token comment based on the file type
