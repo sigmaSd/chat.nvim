@@ -24,4 +24,4 @@ Requires deno
 
 ## TODO
 - [ ] automaticly add the right token comment based on the file type
-- [ ] maye drop the hacks and use https://github.com/ztjhz/ChatGPTFreeApp (if openai let it be)
+- [ ] maybe add a backend for https://github.com/ztjhz/ChatGPTFreeApp
