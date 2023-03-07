@@ -1,5 +1,4 @@
-// import { Chat } from "TODO: Deno.land url";
-import { Chat } from "/home/mrcool/dev/deno/chat/chat.ts";
+import { Chat } from "https://deno.land/x/xchat@0.1.0/chat.ts";
 
 if (import.meta.main) {
   const chat = Chat.start();

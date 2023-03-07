@@ -1,5 +1,6 @@
 local job_id
 local ready = false
+local plugin_path = vim.fn.expand("<sfile>:p:h")
 
 local function get_selection()
   local _, lineStart = unpack(vim.fn.getpos("'<"))
@@ -61,7 +62,7 @@ function ChatStart()
     end
   end
 
-  job_id = vim.fn.jobstart({ "deno", "run", "-A", "./chat.ts" }, {
+  job_id = vim.fn.jobstart({ "deno", "run", "-A", plugin_path .. "/../chat.ts" }, {
     on_stdout = on_stdout,
   })
 end
