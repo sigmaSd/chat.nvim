@@ -44,11 +44,11 @@ function ChatStart()
 
     local resp = vim.trim(table.concat(data, '\n'))
     if ready then
-      local to_write = { "ChatGptStart" }
+      local to_write = { "--[[" }
       for word in resp:gmatch("[^\n]+") do
         table.insert(to_write, word)
       end
-      table.insert(to_write, "ChatGptEnd")
+      table.insert(to_write, "]]--")
       write_line(to_write)
       print(resp)
       return
@@ -81,5 +81,5 @@ function Chat()
 end
 
 vim.api.nvim_create_user_command("ChatStart", ChatStart, {})
-vim.api.nvim_create_user_command("Chat", Chat, {})
+vim.api.nvim_create_user_command("Chat", Chat, { range = true })
 vim.api.nvim_create_user_command("ChatStop", ChatStop, {})
